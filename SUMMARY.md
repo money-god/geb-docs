@@ -1,8 +1,7 @@
 # Table of contents
 
 * [Introduction to GEB](README.md)
-* [Community Resources](community-resources.md)
-* [FLX Mechanics](flx-mechanics.md)
+* [TAI Mechanics](flx-mechanics.md)
 * [FAQ](faq.md)
 
 ## RAI
@@ -23,12 +22,6 @@
 
 * [GEB Risks](risk/geb-risks.md)
 * [PID Failure Modes & Responses](risk/pid-failure-modes-and-responses.md)
-
-## Incentives
-
-* [RAI Uniswap V2 Mint + LP Incentives Program](incentives/rai-mint-+-lp-incentives-program.md)
-* [RAI Uniswap V3 Mint + LP Incentives Program](incentives/rai-uniswap-v3-mint-+-lp-incentives-program.md)
-* [FLX Staking](incentives/flx-staking.md)
 
 ## Contract Variables Translation <a href="#contract-translation" id="contract-translation"></a>
 
@@ -74,7 +67,7 @@
   * [Mandatory Fixed Treasury Reimbursement](system-contracts/sustainability-module/mandatory-fixed-treasury-reimbursement.md)
   * [Increasing Reward Relayer](system-contracts/sustainability-module/increasing-reward-relayer.md)
 * [Automation Module](system-contracts/automation-module/README.md)
-  * [Collateral Auction Throttler](system-contracts/automation-module/untitled.md)
+  * [Collateral Auction Throttler](system-contracts/automation-module/collateral-auction-throttler.md)
   * [Single Spot Debt Ceiling Setter](system-contracts/automation-module/single-spot-debt-ceiling-setter.md)
   * [ESM Threshold Setter](system-contracts/automation-module/esm-threshold-setter.md)
 * [Governance Module](system-contracts/governance-module/README.md)

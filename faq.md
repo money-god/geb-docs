@@ -4,9 +4,9 @@ description: Frequently asked questions about RAI and GEB
 
 # FAQ
 
-### What is RAI?
+### What is TAI?
 
-RAI is an ETH backed stable asset with a [managed float regime](https://en.wikipedia.org/wiki/Managed\_float\_regime). The RAIUSD exchange rate is determined by supply and demand while the protocol that issues RAI tries to stabilize its price by constantly de or revaluing it.
+TAI is an ETH backed stable asset with a [managed float regime](https://en.wikipedia.org/wiki/Managed\_float\_regime). The TAIUSD exchange rate is determined by supply and demand while the protocol that issues RAI tries to stabilize its price by constantly de or revaluing it.
 
 The supply and demand mechanic plays out between two parties: SAFE users (those who generate RAI with their ETH) and RAI holders.
 

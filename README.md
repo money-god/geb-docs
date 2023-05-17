@@ -6,7 +6,7 @@ description: The what and how of the GEB framework
 
 [GEB](https://en.wikipedia.org/wiki/G%C3%B6del,\_Escher,\_Bach) is a framework for deploying systems that can issue [stablecoins](https://medium.com/reflexer-labs/stability-without-pegs-8c6a1cbc7fbd). Stablecoins don't look like [this](https://www.coingecko.com/en/coins/usd-coin) (that's a pegged coin), but rather like [this](https://duneanalytics.com/HggqX/Reflexer-RAI). Stablecoins are a great collateral source for other DeFi protocols (compared to ETH or BTC) and are also a store of value with an embedded funding rate.\
 \
-This documentation is meant to explain all the components behind GEB. Before diving in the docs, we recommend reading our original [whitepaper](https://github.com/reflexer-labs/whitepapers/blob/master/English/rai-english.pdf).\
+This documentation is meant to explain all the components behind GEB. Before diving in the docs, we recommend reading our original [whitepaper](https://mirror.xyz/0x01393d9b6dFFce134b6765e9bdd626b258357C37/e0vdmPeoieNaLKjaZP5OZT02-gT9kQahbbCsltJb4SI).\
 \
 GEB is a modified fork of [MCD](https://github.com/makerdao/dss) that has several core differences:
 
@@ -20,11 +20,3 @@ GEB is a modified fork of [MCD](https://github.com/makerdao/dss) that has severa
 * The possibility to switch between surplus auctions and other types of strategies meant to remove surplus from the system
 * Two prices for each `CollateralType`: one used for generating debt, the other one used exclusively when liquidating SAFEs
 * A stability fee treasury that can pay for oracle calls or other contracts that automate the system
-
-### GEB Overview Diagram
-
-Explore the diagram in detail [here](https://viewer.diagrams.net/?target=blank\&highlight=0000ff\&layers=1\&nav=1\&title=GEB\_overview.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1nIcaY8N8StVCfyAL\_ztbmETJX2bvY3a9%26export%3Ddownload).
-
-![](.gitbook/assets/geb\_overview-1-.png)
-
-{% file src=".gitbook/assets/geb_overview (2).svg" %}
