@@ -10,14 +10,14 @@ In order to participate in surplus auctions you need to bid with protocol tokens
 
 ## 1. Modify the model file as needed
 
-A basic surplus auction bidding model can be found in `models/surplus_model.py`. This model retrieves the latest FLX/USD price from Coingecko and will automatically place bids in an auction.
+A basic surplus auction bidding model can be found in `models/surplus_model.py`. This model retrieves the latest RATE/USD price from Coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/surplus_model.py`:
 
-* `STARTING_FLX_MULTIPLIER`: the maximum acceptable FLX price to use when bidding. This value will be used when bidding on a new auction with no previous bids. Default: `1.50` meaning the maximum price to accept for FLX (in RAI terms) is 150% of the current FLX/USD market price
-* `MINIMUM_FLX_MULTIPLIER`: the minimum acceptable FLX price to use when bidding. Default: `1.10` meaning the minimum price to accept for FLX (in RAI terms) is 110% of the current FLX/USD market price
+* `STARTING_RATE_MULTIPLIER`: the maximum acceptable RATE price to use when bidding. This value will be used when bidding on a new auction with no previous bids. Default: `1.50` meaning the maximum price to accept for RATE (in TAI terms) is 150% of the current RATE/USD market price
+* `MINIMUM_RATE_MULTIPLIER`: the minimum acceptable RATE price to use when bidding. Default: `1.10` meaning the minimum price to accept for RATE (in TAI terms) is 110% of the current RATE/USD market price
 
-`MY_BID_INCREASE`: The amount of bid increase(in FLX) to make when outbidding another bidder. If value is less than the auction house' `bidIncrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid increases of 10%. Note: Current `bidIncrease` on mainnet is `1.03`. Default: `1.03`
+`MY_BID_INCREASE`: The amount of bid increase(in RATE) to make when outbidding another bidder. If value is less than the auction house' `bidIncrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid increases of 10%. Note: Current `bidIncrease` on mainnet is `1.03`. Default: `1.03`
 
 Then, use `chmod +x surplus_model.py`.
 
@@ -47,10 +47,10 @@ Finally, to run the keeper, use `chmod +x run_surplus_keeper.sh`.
 
 ```
 $ ./run_auction_keeper.sh
-Pulling from reflexer/auction-keeper
+Pulling from moneygod/auction-keeper
 Digest: sha256:7e55ec9b0a136fc903d9f7f2690538bcbde9029d957e0e6f84d0282790f9666a
-Status: Downloaded newer image for reflexer/auction-keeper
-docker.io/reflexer/auction-keeper
+Status: Downloaded newer image for moneygod/auction-keeper
+docker.io/moneygod/auction-keeper
 Password for /keystore/key.json:
 ```
 

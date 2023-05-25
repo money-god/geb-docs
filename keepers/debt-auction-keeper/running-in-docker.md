@@ -4,22 +4,22 @@ description: Running a debt auction keeper in a Docker container
 
 # Running in Docker
 
-## 1. Get RAI
+## 1. Get TAI
 
-Buy RAI or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) to generate it.
+Buy TAI or [open a SAFE](https://app.gitbook.com/@money-god/s/geb/pyflex/safe-management/opening-a-safe) to generate it.
 
 ## 2. Modify the model file as needed
 
-A basic debt auction bidding model can be found in `models/debt_model.py`. This model retrieves the latest FLX/USD price from Coingecko and will automatically place bids in an auction.
+A basic debt auction bidding model can be found in `models/debt_model.py`. This model retrieves the latest RATE/USD price from Coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/debt_model.py`:
 
-* `MAXIMUM_FLX_MULTIPLIER`: the maximum acceptable FLX price to use when bidding. Default: `0.90` meaning the maximum price to pay when biding for FLX (with RAI) is 90% of the current FLX/USD market price from Coingecko
-* `MY_BID_DECREASE`: the bid decrease (in FLX) to propose when outbidding another bidder. If the value is smaller than the debt auction house's `bidDecrease`, then it will use the value set in the debt auction house. Example: a value of `1.10` will use bid decreases of 10%. Note: the current `bidDecrease` on mainnet is `1.03`
+* `MAXIMUM_RATE_MULTIPLIER`: the maximum acceptable RATE price to use when bidding. Default: `0.90` meaning the maximum price to pay when biding for RATE (with TAI) is 90% of the current RATE/USD market price from Coingecko
+* `MY_BID_DECREASE`: the bid decrease (in RATE) to propose when outbidding another bidder. If the value is smaller than the debt auction house's `bidDecrease`, then it will use the value set in the debt auction house. Example: a value of `1.10` will use bid decreases of 10%. Note: the current `bidDecrease` on mainnet is `1.03`
 
 Then, use `chmod +x debt_model.py`.
 
-For more information about bidding models, see [this](https://docs.reflexer.finance/keepers/bidding-models).
+For more information about bidding models, see [this](https://docs.tai.money/keepers/bidding-models).
 
 ## 3) Modify the keeper run file
 
@@ -40,10 +40,10 @@ Use `./run_debt_keeper.sh`.
 
 ```
 $ ./run_debt_keeper.sh
-latest: Pulling from reflexer/auction-keeper
+latest: Pulling from moneygod/auction-keeper
 Digest: sha256:7e55ec9b0a136fc903d9f7f2690538bcbde9029d957e0e6f84d0282790f9666a
-Status: Downloaded newer image for reflexer/auction-keeper:latest
-docker.io/reflexer/auction-keeper:latest
+Status: Downloaded newer image for moneygod/auction-keeper:latest
+docker.io/moneygod/auction-keeper:latest
 Password for /keystore/key.json:
 ```
 

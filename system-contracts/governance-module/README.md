@@ -6,7 +6,7 @@ description: Tools for achieving consensus
 
 **Relevant smart contracts:**
 
-* [DSPause](https://github.com/reflexer-labs/ds-pause/blob/master/src/pause.sol)
+* [DSPause](https://github.com/money-god/ds-pause/blob/master/src/pause.sol)
 
 ## 1. Overview
 

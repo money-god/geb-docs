@@ -42,7 +42,7 @@ True
 >>> Rad(10) + Wad(10)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "/Users/georgekellerman/reflexer/pyflex/lib/python3.8/site-packages/pyflex/numeric.py", line 320, in __add__
+  File "/Users/bob/moneygod/pyflex/lib/python3.8/site-packages/pyflex/numeric.py", line 320, in __add__
     raise ArithmeticError
 ArithmeticError
 >>> Ray(10) - Ray(5)

@@ -6,7 +6,7 @@ description: The protocol's liquidation mechanism
 
 ## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary"></a>
 
-The `LiquidationEngine` enables external actors to liquidate SAFEs and send their collateral to the [`CollateralAuctionHouse`](https://reflexer-labs.gitbook.io/geb/system-contracts/untitled/untitled-2) as well as send a portion of their debt to the `AccountingEngine`.
+The `LiquidationEngine` enables external actors to liquidate SAFEs and send their collateral to the [`CollateralAuctionHouse`](https://money-god.gitbook.io/geb/system-contracts/untitled/untitled-2) as well as send a portion of their debt to the `AccountingEngine`.
 
 ## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 

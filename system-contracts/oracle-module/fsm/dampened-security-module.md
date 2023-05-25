@@ -58,8 +58,8 @@ In order for the `DSM` to work properly, an external actor must regularly call `
 
 #### SelfFundedDSM
 
-This contract pulls funds from the [StabilityFeeTreasury](https://github.com/reflexer-labs/geb/blob/master/src/StabilityFeeTreasury.sol) so it can reward addresses for calling`updateResult`.&#x20;
+This contract pulls funds from the [StabilityFeeTreasury](https://github.com/money-god/geb/blob/master/src/StabilityFeeTreasury.sol) so it can reward addresses for calling`updateResult`.&#x20;
 
 **ExternallyFundedDSM**
 
-This contract calls an [FSMWrapper](https://github.com/reflexer-labs/geb-fsm/blob/master/src/FSMWrapper.sol) in order to reward addresses that call `updateResult`.
+This contract calls an [FSMWrapper](https://github.com/money-god/geb-fsm/blob/master/src/FSMWrapper.sol) in order to reward addresses that call `updateResult`.

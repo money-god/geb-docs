@@ -8,14 +8,14 @@ description: Running a staked token auction keeper directly on a host
 
 Python 3.6+
 
-### Get RAI
+### Get TAI
 
-Buy RAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
+Buy TAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@money-god/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
 
 ### Clone
 
 ```
-git clone https://github.com/reflexer-labs/auction-keeper.git
+git clone https://github.com/money-god/auction-keeper.git
 cd auction-keeper
 git submodule update --init --recursive
 ```
@@ -32,19 +32,19 @@ This creates a virtual environment and installs all the keeper dependencies:
 
 ## 2) Modify model file as needed
 
-A basic debt staked auction bidding model can be found in `models/debt_staked_model.py`. This model retrieves the latest FLX/USD price from Coingecko and will automatically place bids in an auction.
+A basic debt staked auction bidding model can be found in `models/debt_staked_model.py`. This model retrieves the latest RATE/USD price from Coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/debt_staked_model.py`:
 
-* `MAXIMUM_FLX_MULTIPLIER`: the maximum acceptable FLX price to use when bidding. Default: `0.90` meaning the maximum price to pay when biding for FLX (with RAI) is 90% of the current FLX/USD market price coming from Coingecko
-* `MINIMUM_FLX_MULTIPLIER`: the minimumum FLX price to use when bidding. This will determine your opening bid. Default: `0.50` meaning the minimumm price to pay when biding for FLX (with RAI) is 50% of the current FLX/USD market price from Coingecko
-* `MY_BID_INCREASE`: the bid increase (in RAI) to propose when outbidding another bidder. If the value is smaller than the staked token auction house's `bidIncrease`, then it will use the value set in the staked token auction house. Example: a value of `1.10` will use bid increases of 10%. Note: the current `bidIncrease` on mainnet is `1.05`
+* `MAXIMUM_RATE_MULTIPLIER`: the maximum acceptable RATE price to use when bidding. Default: `0.90` meaning the maximum price to pay when biding for RATE (with TAI) is 90% of the current RATE/USD market price coming from Coingecko
+* `MINIMUM_RATE_MULTIPLIER`: the minimumum RATE price to use when bidding. This will determine your opening bid. Default: `0.50` meaning the minimumm price to pay when biding for RATE (with TAI) is 50% of the current RATE/USD market price from Coingecko
+* `MY_BID_INCREASE`: the bid increase (in TAI) to propose when outbidding another bidder. If the value is smaller than the staked token auction house's `bidIncrease`, then it will use the value set in the staked token auction house. Example: a value of `1.10` will use bid increases of 10%. Note: the current `bidIncrease` on mainnet is `1.05`
 
 #### Then:
 
 `chmod +x debt_staked_model.py`
 
-For more information about bidding models, see [Bidding Models](https://github.com/reflexer-labs/auction-keeper/blob/master/bidding-models.md).
+For more information about bidding models, see [Bidding Models](https://github.com/money-god/auction-keeper/blob/master/bidding-models.md).
 
 ## 3) Modify keeper run file
 

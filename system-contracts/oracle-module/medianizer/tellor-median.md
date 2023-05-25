@@ -6,7 +6,7 @@ description: Tellor integrated medianizer
 
 ## 1. Summary <a href="#1-introduction" id="1-introduction"></a>
 
-The `TellorPriceFeedMedianizer` has a similar interface to the [Governance Led Median](https://reflexer-labs.gitbook.io/geb/system-contracts/untitled-1/medianizer/governance-led) although, instead of relying on governance whitelisted oracles, it simply keeps a reference to a [Tellor price reference contract](https://tellor.io/data-feed/) (price aggregator).
+The `TellorPriceFeedMedianizer` has a similar interface to the [Governance Led Median](https://money-god.gitbook.io/geb/system-contracts/untitled-1/medianizer/governance-led) although, instead of relying on governance whitelisted oracles, it simply keeps a reference to a [Tellor price reference contract](https://tellor.io/data-feed/) (price aggregator).
 
 ## 2. Contract Variables & Functions <a href="#2-contract-details" id="2-contract-details"></a>
 

@@ -21,7 +21,7 @@ Governance must ensure at all times that there is enough stablecoins on exchange
 
 In case the stablecoin liquidity drops below any of the two limits specied above, governance is advised to pause the PID and restart it only after the liquidity improves.
 
-**NOTE**: lack of liquidity will increase the risk of market manipulation \(as seen in Proto RAI\).
+**NOTE**: lack of liquidity will increase the risk of market manipulation \(as seen in Proto TAI\).
 
 ### Skewed Incentives
 
@@ -39,15 +39,15 @@ There are cases when, even if there is no market manipulation, no skewed incenti
 In this scenario there are three possible solutions:
 
 1. Temporarily pause the PID and wait for the market to come closer toward redemption
-2. Temporarily pause the PID and build a second controller that modifies the stability fee. In this scenario the redemption rate controller would only be used when the market price is consistently above redemption and the stability fee controller would be used when the market price is below redemption. Choosing this option means that governance may need to have long term control over the [TaxCollector](https://docs.reflexer.finance/system-contracts/money-market-module/tax-collector) and there will need to be more governance over rate setting in general.
+2. Temporarily pause the PID and build a second controller that modifies the stability fee. In this scenario the redemption rate controller would only be used when the market price is consistently above redemption and the stability fee controller would be used when the market price is below redemption. Choosing this option means that governance may need to have long term control over the [TaxCollector](https://docs.tai.money/system-contracts/money-market-module/tax-collector) and there will need to be more governance over rate setting in general.
 3. Trigger global settlement and allow the system to shut down using the redemption price.
 
 ## Failure Prevention
 
-In order to make market manipulation as expensive as possible, we propose the following liquidity thresholds for the RAI stablecoin:
+In order to make market manipulation as expensive as possible, we propose the following liquidity thresholds for the TAI stablecoin:
 
-* There must be at least $2M worth of liquidity on the exchange/s that the RAI oracle is pulling a price feed from
-* At least 3% of the RAI supply must be on the exchange/s from which the system is pulling a price feed from
+* There must be at least $2M worth of liquidity on the exchange/s that the TAI oracle is pulling a price feed from
+* At least 3% of the TAI supply must be on the exchange/s from which the system is pulling a price feed from
 
-In addition to this, the PID controller should not be set to its full force right when RAI is launched as it may destabilize the system.
+In addition to this, the PID controller should not be set to its full force right when TAI is launched as it may destabilize the system.
 

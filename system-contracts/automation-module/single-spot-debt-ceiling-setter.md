@@ -8,7 +8,7 @@ description: Setter for a single collateral's debt ceiling
 
 The `SingleSpotDebtCeilingSetter` is meant to recompute the `debtCeiling` for a single collateral type inside the `SAFEEngine`.\
 \
-The setter inherits functionality from the [IncreasingTreasuryReimbursement](https://docs.reflexer.finance/system-contracts/sustainability-module/increasing-treasury-reimbursement).
+The setter inherits functionality from the [IncreasingTreasuryReimbursement](https://docs.tai.money/system-contracts/sustainability-module/increasing-treasury-reimbursement).
 
 ## 2. Contract Variables & Functions <a href="2-contract-details" id="2-contract-details"></a>
 

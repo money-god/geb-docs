@@ -8,14 +8,14 @@ description: Running a collateral auction keeper directly on a host
 
 Python 3.6+
 
-### Get RAI:
+### Get TAI:
 
-Buy RAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
+Buy TAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@money-god/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
 
 ### Clone:
 
 ```text
-git clone https://github.com/reflexer-labs/auction-keeper.git
+git clone https://github.com/money-god/auction-keeper.git
 cd auction-keeper
 git submodule update --init --recursive
 ```
