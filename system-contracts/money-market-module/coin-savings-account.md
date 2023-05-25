@@ -6,7 +6,7 @@ description: Coin Savings Account
 
 ## 1. Introduction (Summary)
 
-Coin Savings Account allows users to deposit `coin` and activate the Coin Savings Rate and earning savings on their `coin`. The savings rate is set by Reflexer Governance, and will typically be less than the base stability fee to remain sustainable. The purpose of Coin Savings Account is to offer another incentive for holding Coin.
+Coin Savings Account allows users to deposit `coin` and activate the Coin Savings Rate and earning savings on their `coin`. The savings rate is set by TAI Governance, and will typically be less than the base stability fee to remain sustainable. The purpose of Coin Savings Account is to offer another incentive for holding Coin.
 
 ## 2. Contract Details
 
@@ -29,7 +29,7 @@ Coin Savings Account allows users to deposit `coin` and activate the Coin Saving
 * `accountingEngine` - an address that conforms to a `accountingEngineLike` interface. Not set in constructor. Must be set by governance.
 * `updateRime` - the last time that updateAccumulatedRate is called.
 
-The values of `savingsRate` and `accountingEngine` can be changed by an authorized address in the contract (i.e. Reflexer Governance). The values of `accumulatedRates`, `savings`, `totalSavings`, and `updateTime` are updated internally in the contract and cannot be changed manually.
+The values of `savingsRate` and `accountingEngine` can be changed by an authorized address in the contract (i.e. TAI Governance). The values of `accumulatedRates`, `savings`, `totalSavings`, and `updateTime` are updated internally in the contract and cannot be changed manually.
 
 ## 3. Key Mechanisms & Concepts
 
@@ -65,7 +65,7 @@ The primary usage will be for `addresses` to store their `coin` in the `savingsA
 
 ## 4. Gotchas / Integration Concerns
 
-* The `savingsRate` is set (globally) through the governance system. It can be set to any number > 0%. This includes the possibility of it being set to a number that would cause the savings rate to accumulate faster than the collective Stability Fees, thereby accruing system debt and eventually causing FLX to be minted.
+* The `savingsRate` is set (globally) through the governance system. It can be set to any number > 0%. This includes the possibility of it being set to a number that would cause the savings rate to accumulate faster than the collective Stability Fees, thereby accruing system debt and eventually causing RATE to be minted.
 * If `updateAccumulatedRate()` has not been called recently before an address calls `withdraw()` they will not get the full amount they have earned over the time of their deposit.
 * If a user wants to `deposit` or `withdraw` 1 DAI into/from the Coin Savings Account, they should send a `wad` = to `1 / accumulatedRates` as the amount moved from their balance will be `1 * accumulatedRates`
 

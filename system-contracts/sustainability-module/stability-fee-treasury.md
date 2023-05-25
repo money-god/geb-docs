@@ -16,7 +16,7 @@ The `StabilityFeeTreasury` is meant to allow other contracts or EOAs to pull fun
 * `allowance[receiver: address]` - total withdrawal allowance
 * `pulledPerBlock[usr: address`, `blockNr: uint256]` - total amount pulled by a user on a specific block
 * `safeEngine` - address of the `SAFEEngine`
-* `systemCoin` - system coin address ([Coin.sol](https://github.com/reflexer-labs/geb/blob/master/src/Coin.sol))
+* `systemCoin` - system coin address ([Coin.sol](https://github.com/money-god/geb/blob/master/src/Coin.sol))
 * `coinJoin` - system coin adapter address
 * `extraSurplusReceiver` - address that receives extra unused funds from the treasury
 * `treasuryCapacity` - maximum amount of stability fees should be kept in the treasury

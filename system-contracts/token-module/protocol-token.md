@@ -6,7 +6,7 @@ description: The protocol's recapitalization source
 
 ## 1. Summary <a id="1-introduction-summary"></a>
 
-The protocol token is a [DsDelegateToken](https://github.com/reflexer-labs/ds-token/blob/master/src/delegate.sol) that provides logic for burning and authorized minting of new tokens as well as delegation capabilities.
+The protocol token is a [DsDelegateToken](https://github.com/money-god/ds-token/blob/master/src/delegate.sol) that provides logic for burning and authorized minting of new tokens as well as delegation capabilities.
 
 ## 2. Contract Variables & Functions <a id="2-contract-details"></a>
 
@@ -69,5 +69,5 @@ The protocol token is a [DsDelegateToken](https://github.com/reflexer-labs/ds-to
 
 ## 3. Walkthrough <a id="3-key-mechanisms-and-concepts"></a>
 
-Along with the standard ERC20 token interface, the protocol token also has [DSAuth](https://github.com/reflexer-labs/ds-auth)-protected mint and burn functions.
+Along with the standard ERC20 token interface, the protocol token also has [DSAuth](https://github.com/money-god/ds-auth)-protected mint and burn functions.
 

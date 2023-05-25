@@ -2,17 +2,17 @@
 
 This class extends the core `GEB` class with additional tools and contracts that are not used as often as other SAFE management tools. Here you will find utils for contracts such as DSPause, ESM etc. These contracts are scattered across several repositories. Please refer to the smart contract documentation to learn more about them.
 
-**IMPORTANT:** To avoid bloating the main [geb.js](https://www.npmjs.com/package/geb.js) package this class is only available in a [separate package](https://www.npmjs.com/package/@reflexer-finance/geb-admin). Please install it like this:
+**IMPORTANT:** To avoid bloating the main [geb.js](https://www.npmjs.com/package/geb.js) package this class is only available in a [separate package](https://www.npmjs.com/package/@money-god/geb-admin). Please install it like this:
 
 ```
-npm install @reflexer-finance/geb-admin
+npm install @money-god/geb-admin
 ```
 
 And after that you are ready to use the admin tools similar to the GEB class:
 
 ```typescript
 import { ethers } from 'ethers'
-import { GebAdmin } from "@reflexer-finance/geb-admin"
+import { GebAdmin } from "@money-god/geb-admin"
 
  const provider = new ethers.providers.JsonRpcProvider('http://kovan.infura.io/<API KEY>')
  const gebAdmin = new GebAdmin('kovan', provider)
@@ -22,7 +22,7 @@ import { GebAdmin } from "@reflexer-finance/geb-admin"
 
 \+ **new GebAdmin**(`network`: GebDeployment, `provider`: GebProviderInterface | Provider): [_GebAdmin_](gebadmin.md)
 
-_Defined in_ [_packages/geb-admin/src/geb-admin.ts:52_](https://github.com/reflexer-labs/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L52)
+_Defined in_ [_packages/geb-admin/src/geb-admin.ts:52_](https://github.com/money-god/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L52)
 
 **Parameters:**
 
@@ -91,13 +91,13 @@ Currently the following contracts ae available in this property:
 * FixedDiscountCollateralAuctionHouse
 * Weth (ERC20)
 
-For detailed information about the functions of each contract we recommend referring directly to the smart-contract [code](https://github.com/reflexer-labs/geb) and [documentation](https://docs.reflexer.finance/)
+For detailed information about the functions of each contract we recommend referring directly to the smart-contract [code](https://github.com/money-god/geb) and [documentation](https://docs.tai.money/)
 
 ### contractsAdmin
 
 • **contractsAdmin**: _AdminApis_
 
-_Defined in_ [_packages/geb-admin/src/geb-admin.ts:52_](https://github.com/reflexer-labs/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L52)
+_Defined in_ [_packages/geb-admin/src/geb-admin.ts:52_](https://github.com/money-god/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L52)
 
 Object containing all GEB admin contracts instances for low level interactions. It currently has the following contracts:
 
@@ -284,7 +284,7 @@ Note that this function will make a lot of network calls and is therefore very s
 
 ▸ **gnosisSafeThreshold1SubmitTransaction**(`sender`: string, `to`: string, `data`: string): _TransactionRequest_
 
-_Defined in_ [_packages/geb-admin/src/geb-admin.ts:203_](https://github.com/reflexer-labs/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L203)
+_Defined in_ [_packages/geb-admin/src/geb-admin.ts:203_](https://github.com/money-god/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L203)
 
 Submit a transaction to a gnosis safe directly executed. Works only if the threshold on the safe is 1.
 
@@ -326,7 +326,7 @@ Defined in packages/geb/lib/geb.d.ts:136
 
 ▸ **verifyWebScheduleCallcode**(`govFunctionAbi`: string, `params`: any\[], `earliestExecutionTime`: number, `calldata`: string, `description?`: string): _Promise‹boolean›_
 
-_Defined in_ [_packages/geb-admin/src/geb-admin.ts:75_](https://github.com/reflexer-labs/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L75)
+_Defined in_ [_packages/geb-admin/src/geb-admin.ts:75_](https://github.com/money-god/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L75)
 
 Verifies a transaction for scheduling proposals
 
@@ -348,7 +348,7 @@ Promise
 
 ▸ **webExecuteProposal**(`govFunctionAbi`: string, `params`: any\[], `earliestExecutionTime`: number): _Promise‹TransactionRequest›_
 
-_Defined in_ [_packages/geb-admin/src/geb-admin.ts:99_](https://github.com/reflexer-labs/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L99)
+_Defined in_ [_packages/geb-admin/src/geb-admin.ts:99_](https://github.com/money-god/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L99)
 
 Encodes executing a proposal in dspause for web GUI
 
@@ -368,7 +368,7 @@ Promise
 
 ▸ **webScheduleProposal**(`govFunctionAbi`: string, `params`: any\[], `earliestExecutionTime`: number, `description?`: string): _Promise‹object›_
 
-_Defined in_ [_packages/geb-admin/src/geb-admin.ts:124_](https://github.com/reflexer-labs/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L124)
+_Defined in_ [_packages/geb-admin/src/geb-admin.ts:124_](https://github.com/money-god/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L124)
 
 Encodes scheduling a proposal in dspause for web GUI
 
@@ -389,7 +389,7 @@ Promise
 
 ▸ **webTestScheduleProposal**(`govFunctionAbi`: string, `params`: any\[], `earliestExecutionTime`: number, `description?`: string): _Promise‹void›_
 
-_Defined in_ [_packages/geb-admin/src/geb-admin.ts:173_](https://github.com/reflexer-labs/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L173)
+_Defined in_ [_packages/geb-admin/src/geb-admin.ts:173_](https://github.com/money-god/geb.js/blob/30c41df/packages/geb-admin/src/geb-admin.ts#L173)
 
 Test the execution of a proposal about to be schedule in dspause with web GUI
 

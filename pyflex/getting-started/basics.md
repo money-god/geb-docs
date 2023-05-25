@@ -84,5 +84,5 @@ If the `SAFE` is underwater, you can also liquidate it:
 
 These are just a few examples. To see all supported functions,  view the source code:
 
-{% embed url="https://github.com/reflexer-labs/pyflex/blob/master/pyflex/gf.py" %}
+{% embed url="https://github.com/money-god/pyflex/blob/master/pyflex/gf.py" %}
 

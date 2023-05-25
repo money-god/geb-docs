@@ -4,7 +4,7 @@ The following are examples of how you can use geb.js to facilitate the Global Se
 
 ## Example Flow for Global Settlement Using GEB.js
 
-These scripts can help you go throught the steps described on the [Global Settlement](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#the-shutdown-mechanism-9-crucial-steps) page. 
+These scripts can help you go throught the steps described on the [Global Settlement](https://docs.tai.money/system-contracts/shutdown-module/global-settlement#the-shutdown-mechanism-9-crucial-steps) page. 
 
 We first need to setup `geb.js` and `ethers.js`:
 
@@ -28,14 +28,14 @@ const hasGlobalSettlementStarted = shutdownTime.gt(0)
 
 ### Withdraw Excess Collateral
 
-After settlement starts, each collateral needs to be frozen \([Step 2](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#2-cage-ilk)\). This needs to be done only once for every collateral type. 
+After settlement starts, each collateral needs to be frozen \([Step 2](https://docs.tai.money/system-contracts/shutdown-module/global-settlement#2-cage-ilk)\). This needs to be done only once for every collateral type. 
 
 ```typescript
 const tx = geb.contracts.globalSettlement.freezeCollateralType(utils.ETH_A)
 await wallet.sendTransaction(tx)
 ```
 
-Since a SAFE is supposed to be over-collateralized, its owner can already withdraw excess collateral. The following script assumes that the SAFE is owned by a [proxy](https://github.com/reflexer-labs/ds-proxy/blob/master/src/proxy.sol) contract. It also uses the Global Settlement Proxy Actions to pack and atomically execute multiple transactions at once.
+Since a SAFE is supposed to be over-collateralized, its owner can already withdraw excess collateral. The following script assumes that the SAFE is owned by a [proxy](https://github.com/money-god/ds-proxy/blob/master/src/proxy.sol) contract. It also uses the Global Settlement Proxy Actions to pack and atomically execute multiple transactions at once.
 
 ```typescript
 const proxy = await geb.getProxyAction(wallet.address)
@@ -45,13 +45,13 @@ const tx = proxy.freeTokenCollateralGlobalSettlement(wethJoinAddress, 3)
 await wallet.sendTransaction(tx)
 ```
 
-This fulfills [step 3](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#3-skim-ilk-urn) and [step 5](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement#5-free-ilk) from the Global Settlement process.
+This fulfills [step 3](https://docs.tai.money/system-contracts/shutdown-module/global-settlement#3-skim-ilk-urn) and [step 5](https://docs.tai.money/system-contracts/shutdown-module/global-settlement#5-free-ilk) from the Global Settlement process.
 
 ### Set the Final COL/COIN Exchange Rates 
 
 This part of the process consists in determining an exchange rate between the system coins that are still in circulation and each individual collateral type accepted by the system. The system needs to account for all Safes \(I\), terminate all ongoing collateral auctions \(II\) and remove all system surplus \(III\).
 
-This needs to be done only once for the whole system. These steps can be taken care of by the [settlement keeper](https://github.com/reflexer-labs/settlement-keeper) bot or by anyone who is willing to pay the gas costs associated with these transactions.
+This needs to be done only once for the whole system. These steps can be taken care of by the [settlement keeper](https://github.com/money-god/settlement-keeper) bot or by anyone who is willing to pay the gas costs associated with these transactions.
 
 ```typescript
 // For (I) the function `processSAFE` needs to be called for all SAFEs,

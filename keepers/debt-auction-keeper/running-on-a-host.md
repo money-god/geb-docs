@@ -8,14 +8,14 @@ description: Running a debt auction keeper directly on a host
 
 Python 3.6+
 
-### Get RAI
+### Get TAI
 
-Buy RAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@reflexer-labs/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
+Buy TAI from Uniswap v2 or [open a SAFE](https://app.gitbook.com/@money-god/s/geb/pyflex/safe-management/opening-a-safe) and generate it.
 
 ### Clone
 
 ```
-git clone https://github.com/reflexer-labs/auction-keeper.git
+git clone https://github.com/money-god/auction-keeper.git
 cd auction-keeper
 git submodule update --init --recursive
 ```
@@ -32,13 +32,13 @@ This creates a virtual environment and installs all the keeper dependencies:
 
 ## 2) Modify model file as needed
 
-A basic debt auction bidding model can be found in `models/debt_model.py`. This model retrieves the latest FLX/USD price from coingecko and will automatically place bids in an auction.
+A basic debt auction bidding model can be found in `models/debt_model.py`. This model retrieves the latest RATE/USD price from coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/debt_model.py`:
 
-`MAXIMUM_FLX_MULTIPLIER`: The maximum acceptable FLX price to use when bidding. Default: `0.90` meaning the maximum price to pay when buying FLX(in RAI) is 90% of the current FLX/USD market price
+`MAXIMUM_RATE_MULTIPLIER`: The maximum acceptable RATE price to use when bidding. Default: `0.90` meaning the maximum price to pay when buying RATE(in TAI) is 90% of the current RATE/USD market price
 
-`MY_BID_DECREASE`: The amount of bid decrease(in FLX) to make when outbidding another bidder. If value is less than the auction house' `bidDecrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid decreases of 10%. Note: Current `bidDecrease` on mainnet is `1.03`. Default: `1.03`
+`MY_BID_DECREASE`: The amount of bid decrease(in RATE) to make when outbidding another bidder. If value is less than the auction house' `bidDecrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid decreases of 10%. Note: Current `bidDecrease` on mainnet is `1.03`. Default: `1.03`
 
 ### Then:
 
@@ -115,10 +115,10 @@ Finally, if debt still exists and is enough to start an auction, the _auction-ke
 
 ```
 [ec2-user@ip-172-31-40-135 ~]$ ./run_debt_auction_keeper.sh
-upstream: Pulling from reflexer/auction-keeper
+upstream: Pulling from moneygod/auction-keeper
 Digest: sha256:d222e4d8d948262af15fbc09e64973a6df65eb0f96023ea3ec7179674d87f28c
-Status: Image is up to date for reflexer/auction-keeper:upstream
-docker.io/reflexer/auction-keeper:upstream
+Status: Image is up to date for moneygod/auction-keeper:upstream
+docker.io/moneygod/auction-keeper:upstream
 Password for /keystore/keystore.json: 
 2021-01-20 04:16:01,302 INFO     Keeper connected to RPC connection https://myparitynode.com
 2021-01-20 04:16:01,302 INFO     Keeper operating as 0xdD1693BD8E307eCfDbe51D246562fc4109f871f8

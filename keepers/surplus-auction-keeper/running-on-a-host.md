@@ -15,7 +15,7 @@ Python 3.6+
 ### Clone:
 
 ```
-git clone https://github.com/reflexer-labs/auction-keeper.git
+git clone https://github.com/money-god/auction-keeper.git
 cd auction-keeper
 git submodule update --init --recursive
 ```
@@ -32,15 +32,15 @@ This creates a virtual environment and installs requirements:
 
 ## 2. Modify model file as needed
 
-A basic surplus auction bidding model can be found in `models/surplus_model.py`. This model retrieves the latest FLX/USD price from coingecko and will automatically place bids in an auction.
+A basic surplus auction bidding model can be found in `models/surplus_model.py`. This model retrieves the latest RATE/USD price from coingecko and will automatically place bids in an auction.
 
 You probably want to modify the following variables in `models/surplus_model.py`:
 
-`STARTING_FLX_MULTIPLIER`: The maximum acceptable FLX price to use when bidding. This value will be used when bidding on a new auction with no previous bids. Default: `1.50` meaning the maxiimum price to accept for FLX(in RAI) is 150% of the current FLX/USD market price
+`STARTING_RATE_MULTIPLIER`: The maximum acceptable RATE price to use when bidding. This value will be used when bidding on a new auction with no previous bids. Default: `1.50` meaning the maxiimum price to accept for RATE(in TAI) is 150% of the current RATE/USD market price
 
-`MINIMUM_FLX_MULTIPLIER`: The minimum acceptable FLX price to use when bidding. Default: `1.10` meaning the minimum price to accept for FLX(in RAI) is 110% of the current FLX/USD market price
+`MINIMUM_RATE_MULTIPLIER`: The minimum acceptable RATE price to use when bidding. Default: `1.10` meaning the minimum price to accept for RATE(in TAI) is 110% of the current RATE/USD market price
 
-`MY_BID_INCREASE`: The amount of bid increase(in FLX) to make when outbidding another bidder. If value is less than the auction house' `bidIncrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid increases of 10%. Note: Current `bidIncrease` on mainnet is `1.03`. Default: `1.03`
+`MY_BID_INCREASE`: The amount of bid increase(in RATE) to make when outbidding another bidder. If value is less than the auction house' `bidIncrease`, then it will use the auction house setting. Example: A value of `1.10` will create bid increases of 10%. Note: Current `bidIncrease` on mainnet is `1.03`. Default: `1.03`
 
 ### Ensure script is executable
 
@@ -91,7 +91,7 @@ If enough surplus exists in the system, the surplus _auction-keeper_ will call `
 
 #### Bid on a Surplus Auction
 
-If the surplus _auction-keeper_ has FLX, it will bid on surplus auctions by calling `increaseBidSize`
+If the surplus _auction-keeper_ has RATE, it will bid on surplus auctions by calling `increaseBidSize`
 
 ```
 2021-01-19 21:15:33,578 INFO     Sending new bid @100.000000000000000000 for auction 16

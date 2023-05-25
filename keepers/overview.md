@@ -40,7 +40,7 @@ Pre-requisites: Python 3.6+
 Install `auction-keeper` dependencies with:
 
 ```text
-git clone https://github.com/reflexer-finance/auction-keeper.git
+git clone https://github.com/money-god/auction-keeper.git
 cd auction-keeper
 git submodule update --init --recursive
 pip3 install -r requirements.txt
@@ -70,7 +70,7 @@ Run `bin/auction-keeper -h` to see an up-to-date list of arguments and usage inf
 
 `--rpc-timeout SECS` Defaults to `10`
 
-The keeper connects to the blockchain network using [Web3.py](https://github.com/ethereum/web3.py) and interacts with GEB using [pyflex](https://github.com/reflexer-labs/pyflex). A connection to an Ethereum node \(`--rpc-host`\) is required. [Parity](https://www.parity.io/ethereum/) and [Geth](https://geth.ethereum.org/) nodes are supported over HTTP. Websocket endpoints are not supported in `pyflex`. A _full_ or _archive_ node is required; _light_ nodes are **not** supported.
+The keeper connects to the blockchain network using [Web3.py](https://github.com/ethereum/web3.py) and interacts with GEB using [pyflex](https://github.com/money-god/pyflex). A connection to an Ethereum node \(`--rpc-host`\) is required. [Parity](https://www.parity.io/ethereum/) and [Geth](https://geth.ethereum.org/) nodes are supported over HTTP. Websocket endpoints are not supported in `pyflex`. A _full_ or _archive_ node is required; _light_ nodes are **not** supported.
 
 If you don't want to run your own node, third-party providers are available. This software has been tested with [Infura](https://infura.io), [ChainSafe](https://chainsafe.io/) and [QuikNode](https://v2.quiknode.io/).
 
@@ -136,7 +136,7 @@ To start collateral auctions, the keeper needs a list of SAFEs and the collatera
 
 `--graph-block-threshold NUMBER_OF_BLOCKS` When the keeper fetches SAFE data to find critical safes, use the `--graph-endpoints` when the keeper's last processed block is older than `NUMBER_OF_BLOCKS`. The graph will be faster than a node when fetching historical data, but recent graph blocks might be slightly delayed compared to an ethereum node. This allows the keeper to to fetch historical data from the graph, but use the node for all newer blocks. Defaults to `20`
 
-The following are the most recent Graph node endpoints for RAI:`--graph-endpoints https://subgraph.reflexer.finance/subgraphs/name/reflexer-labs/rai,https://api.thegraph.com/subgraphs/name/reflexer-labs/rai-mainnet`
+The following are the most recent Graph node endpoints for TAI:`--graph-endpoints https://subgraph.tai.money/subgraphs/name/tai,https://subgraph-goerli.tai.money/subgraphs/name/tai`
 
 #### Auctions
 
@@ -156,7 +156,7 @@ Flash swaps allow a keeper to participate in collateral auctions without any sys
 
 `--flash-swap` Turn on Uniswap flash swaps for collateral auctions. Not supported for `--type debt` or `--type surplus`
 
-[Read more about flash swaps](https://github.com/reflexer-labs/geb-docs/tree/c027d74c487c0a715a19a415c1c97933e43a9f7d/keepers/collateral-auction-keeper/flash-swaps.md)
+[Read more about flash swaps](https://github.com/money-god/geb-docs/tree/c027d74c487c0a715a19a415c1c97933e43a9f7d/keepers/collateral-auction-keeper/flash-swaps.md)
 
 #### Sharding/Settling
 
@@ -197,7 +197,7 @@ Many parameters determine the appropriate bid delay. For illustration purposes, 
   * Despite batching log queries into multiple requests, Geth nodes are generally unable to initialize the SAFE state cache in a reasonable amount of time.  As such, **Geth is not recommended for liquidating SAFEs**
   * To manage resources, it is recommended to run separate keepers using separate accounts to liquidate \(`--start-auctions-only`\) and bid \(`--bid-only`\) in auctions
 
-For some known Ubuntu and macOS issues see the [pyflex](https://github.com/reflexer-labs/pyflex) README.
+For some known Ubuntu and macOS issues see the [pyflex](https://github.com/money-god/pyflex) README.
 
 ### Testing
 
@@ -206,7 +206,7 @@ This project uses [pytest](https://docs.pytest.org/en/latest/) for unit testing.
 In order to be able to run tests you should execute:
 
 ```text
-git clone https://github.com/reflexer-labs/auction-keeper.git
+git clone https://github.com/money-god/auction-keeper.git
 cd auction-keeper
 git submodule update --init --recursive
 ./install.sh

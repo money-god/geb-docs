@@ -8,12 +8,12 @@ description: >-
 
 **Relevant smart contracts:**
 
-* [DSDelegateToken](https://github.com/reflexer-labs/ds-token/blob/master/src/delegate.sol)
-* [Coin](https://github.com/reflexer-labs/geb/blob/master/src/shared/Coin.sol)
-* [BasicTokenAdapters](https://github.com/reflexer-labs/geb/blob/master/src/shared/BasicTokenAdapters.sol)
-* [AdvancedTokenAdapters](https://github.com/reflexer-labs/geb-deploy/blob/master/src/AdvancedTokenAdapters.sol)
-* [ProtocolTokenAuthority](https://github.com/reflexer-labs/geb-protocol-token-authority/blob/master/src/ProtocolTokenAuthority.sol)
-* [GebPrintingPermissions](https://github.com/reflexer-labs/geb-printing-permissions/blob/master/src/GebPrintingPermissions.sol)
+* [DSDelegateToken](https://github.com/money-god/ds-token/blob/master/src/delegate.sol)
+* [Coin](https://github.com/money-god/geb/blob/master/src/shared/Coin.sol)
+* [BasicTokenAdapters](https://github.com/money-god/geb/blob/master/src/shared/BasicTokenAdapters.sol)
+* [AdvancedTokenAdapters](https://github.com/money-god/geb-deploy/blob/master/src/AdvancedTokenAdapters.sol)
+* [ProtocolTokenAuthority](https://github.com/money-god/geb-protocol-token-authority/blob/master/src/ProtocolTokenAuthority.sol)
+* [GebPrintingPermissions](https://github.com/money-god/geb-printing-permissions/blob/master/src/GebPrintingPermissions.sol)
 
 ## 1. Overview <a id="1-introduction-summary"></a>
 
@@ -30,7 +30,7 @@ The token module has four distinct parts:
 ## 2. Component Descriptions <a id="5-failure-modes-bounds-on-operating-conditions-and-external-risk-factors"></a>
 
 * System Coin: this contract is the user facing ERC20 token maintaining the accounting for external system coin balances.
-* Protocol Token: a token adhering to the ERC20 standard which also has [DSAuth](https://github.com/reflexer-labs/ds-auth)-protected mint and burn functions as well as delegation capabilities. The protocol token has two main use-cases:
+* Protocol Token: a token adhering to the ERC20 standard which also has [DSAuth](https://github.com/money-god/ds-auth)-protected mint and burn functions as well as delegation capabilities. The protocol token has two main use-cases:
   * **As a governance token:** tokens can be used as a representation of voting power
   * **As a recapitalization resource:** protocol tokens can autonomously be minted by the `DebtAuctionHouse` and sold for system coins which are used to recapitalize the system in times of insolvency
 * Protocol Token Authority: determines who can mint and burn protocol tokens. Can be controlled directly by token holders, by the Protocol Token Authority or in some cases all control can be withdrawn from it.

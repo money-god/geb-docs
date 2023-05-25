@@ -4,7 +4,7 @@ description: A central hub for all SAFEs
 
 # SAFE Manager
 
-**Smart contract code:** [**GebSafeManager**](https://github.com/reflexer-labs/geb-safe-manager/blob/master/src/GebSafeManager.sol)****
+**Smart contract code:** [**GebSafeManager**](https://github.com/money-god/geb-safe-manager/blob/master/src/GebSafeManager.sol)****
 
 ## 1. Summary <a href="#1-introduction-summary" id="1-introduction-summary"></a>
 
@@ -100,4 +100,4 @@ The SAFE Manager is an abstraction around the `SAFEEngine` that allows anyone to
 
 ## 3. Risks
 
-When `openSAFE` is executed, a new `safeHandler` is created and a `safeId` is assigned to it for a specific `owner`. If the user calls `CollateralJoin.join` to add collateral to the `safeHandler` immediately after the SAFE creation transaction is mined, there is a chance that a chain reorg occurs. This would result in the user losing the ownership of the `safeHandler` and therefore lose their collateral. Users can avoid this issue when using [proxy actions](https://github.com/reflexer-labs/geb-proxy-actions/blob/master/src/GebProxyActions.sol).
+When `openSAFE` is executed, a new `safeHandler` is created and a `safeId` is assigned to it for a specific `owner`. If the user calls `CollateralJoin.join` to add collateral to the `safeHandler` immediately after the SAFE creation transaction is mined, there is a chance that a chain reorg occurs. This would result in the user losing the ownership of the `safeHandler` and therefore lose their collateral. Users can avoid this issue when using [proxy actions](https://github.com/money-god/geb-proxy-actions/blob/master/src/GebProxyActions.sol).

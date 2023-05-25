@@ -1,33 +1,13 @@
 # Table of contents
 
 * [Introduction to GEB](README.md)
-* [TAI Mechanics](flx-mechanics.md)
+* [TAI Mechanics](tai-mechanics.md)
 * [FAQ](faq.md)
-
-## RAI
-
-* [RAI Use-Cases](rai/rai-use-cases.md)
-* [Multi-chain RAI](rai/multi-chain-rai.md)
-* [RAI Integrations](rai/rai-integrations-and-partners.md)
-
-## The Money God League
-
-* [Intro to The League](the-money-god-league/intro-to-the-league.md)
-
-## Ungovernance
-
-* [Governance Minimization Guide](ungovernance/governance-minimization-guide.md)
 
 ## Risk
 
 * [GEB Risks](risk/geb-risks.md)
 * [PID Failure Modes & Responses](risk/pid-failure-modes-and-responses.md)
-
-## Contract Variables Translation <a href="#contract-translation" id="contract-translation"></a>
-
-* [Core Contracts Naming Transition](contract-translation/naming-transition.md)
-* [Governance Contracts Naming Transition](contract-translation/governance-contracts-naming-transition.md)
-* [SAFE Management Contract Naming Transition](contract-translation/safe-management-contract-naming-transition.md)
 
 ## System Contracts
 
@@ -132,5 +112,3 @@
 
 * [SAFE Protection](liquidation-protection/safe-protection.md)
 * [Liquidation Protection Guide](liquidation-protection/liquidation-protection-guide.md)
-* [Uni-V2 RAI/ETH Savior Details](liquidation-protection/uni-v2-rai-eth-savior-details.md)
-* [Curve V1 Savior Details](liquidation-protection/curve-v1-savior-details.md)

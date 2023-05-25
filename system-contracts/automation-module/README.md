@@ -6,9 +6,9 @@ description: A set of contracts in charge with automating a GEB
 
 **Relevant smart contracts:**
 
-* [CollateralAuctionThrottler](https://github.com/reflexer-labs/geb-collateral-auction-throttler/blob/master/src/CollateralAuctionThrottler.sol)
-* [SingleSpotDebtCeilingSetter](https://github.com/reflexer-labs/geb-debt-ceiling-setter/blob/master/src/SingleSpotDebtCeilingSetter.sol)
-* [ESMThresholdSetter](https://github.com/reflexer-labs/geb-esm-threshold-setter/blob/master/src/ESMThresholdSetter.sol)
+* [CollateralAuctionThrottler](https://github.com/money-god/geb-collateral-auction-throttler/blob/master/src/CollateralAuctionThrottler.sol)
+* [SingleSpotDebtCeilingSetter](https://github.com/money-god/geb-debt-ceiling-setter/blob/master/src/SingleSpotDebtCeilingSetter.sol)
+* [ESMThresholdSetter](https://github.com/money-god/geb-esm-threshold-setter/blob/master/src/ESMThresholdSetter.sol)
 
 ## 1. Overview
 

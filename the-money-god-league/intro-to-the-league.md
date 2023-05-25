@@ -6,9 +6,9 @@ The Money God League is an initiative meant to bring non-pegged stable assets \(
 
 ## 2. Who Can Be in The League?
 
-Initially, the Reflexer team will seek to work with a few established projects that have a clear idea of what they want to achieve with their stable assets and also have a roadmap with collateral assets that they want to add in the new protocols.
+Initially, the TAI team will seek to work with a few established projects that have a clear idea of what they want to achieve with their stable assets and also have a roadmap with collateral assets that they want to add in the new protocols.
 
 ## 3. Entering the League
 
-For now, you can simply join [Reflexer's Discord](https://discord.gg/QYBEw6Z) and start to talk with the core team about building a new Money God. More details will be released in the next few months.
+For now, you can simply join [TAI's Discord](https://discord.com/invite/qd7MZwjF2u) and start to talk with the core team about building a new Money God. More details will be released in the next few months.
 

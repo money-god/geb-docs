@@ -156,7 +156,7 @@ It is important to set the correct `shutdownCooldown` period. If you set an inco
 * The Cooldown period's purpose is so that auctions can be `fastTrackAuction`'d and `processSAFE`'d applies to all SAFES (not just the undercollateralized ones).
 * Once the time period between global settlement and the cool-down period has passed, Coin holders are exposed to the ability to redeem their Coin for collateral.
   * Therefore the `shutdownCooldown` value should not be too large, so governance should advise for this at least.
-* SAFE (processSAFE/GlobalSettlement) Keeper - is a tool to process underwater SAFEs if not all undercollateralized SAFES are accounted for. This Keeper could be used by GEB Stakeholders such as large Coin holders/custodians, FLX governors, Redemption keepers and more.
+* SAFE (processSAFE/GlobalSettlement) Keeper - is a tool to process underwater SAFEs if not all undercollateralized SAFES are accounted for. This Keeper could be used by GEB Stakeholders such as large Coin holders/custodians, RATE governors, Redemption keepers and more.
 
 ## 5. Failure Modes (Bounds on Operating Conditions & External Risk Factors)
 
