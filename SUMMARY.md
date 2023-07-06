@@ -5,7 +5,7 @@
   * [Supported Collaterals](how-does-tai-work/supported-collaterals.md)
   * [Liquidations and Auctions](how-does-tai-work/liquidations-and-auctions.md)
   * [Tokenomics](how-does-tai-work/tokenomics.md)
-  * [Governance](how-does-tai-work/governance/README.md)
+  * [Governance](how-does-tai-work/governance.md)
     * [Goverance Process](how-does-tai-work/governance/goverance-process.md)
     * [Governance Parameters](how-does-tai-work/governance/governance-parameters.md)
   * [Rewards](how-does-tai-work/rewards.md)
