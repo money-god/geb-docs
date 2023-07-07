@@ -9,6 +9,7 @@
     * [Goverance Process](how-does-tai-work/governance/goverance-process.md)
     * [Governance Parameters](how-does-tai-work/governance/governance-parameters.md)
   * [Rewards](how-does-tai-work/rewards.md)
+  * [Audits](how-does-tai-work/audits.md)
 * [TAI Protocol: In-depth](tai-protocol-in-depth/README.md)
   * [Contracts](tai-protocol-in-depth/contracts/README.md)
     * [System Contracts](tai-protocol-in-depth/contracts/system-contracts/README.md)
